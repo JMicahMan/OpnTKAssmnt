@@ -27,7 +27,7 @@ namespace OpnTKAssmnt
             set;
         }
 
-        public float AspectRatio
+        public float AspectRatio 
         {
             private get;
             set;
