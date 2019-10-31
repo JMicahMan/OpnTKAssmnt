@@ -17,9 +17,12 @@ namespace OpnTKAssmnt
 {
     public static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            new Window(800, 600, "OpenGLAssmnt");     
+            using (var window = new Window(800, 600, "OpenTKAssmnt"))
+            {
+                window.Run(60.0);
+            }
         }
     }
 }
