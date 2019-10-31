@@ -87,7 +87,7 @@ namespace OpnTKAssmnt
             GL.BindBuffer(BufferTarget.ArrayBuffer, VertexBufferObject);
             GL.BufferData(BufferTarget.ArrayBuffer, Vertices.Length * sizeof(float), Vertices, BufferUsageHint.StaticDraw);
 
-            LightingShader = new Shader("Shades/shade.vert", "Shade/lights.frag");
+            LightingShader = new Shader("Shades/shade.vert", "Shades/lights.frag");
             LampShader = new Shader("Shades/shade.vert", "Shades/shade.frag");
 
             VaoModel = GL.GenVertexArray();

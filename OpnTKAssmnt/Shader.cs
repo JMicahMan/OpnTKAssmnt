@@ -17,9 +17,9 @@ namespace OpnTKAssmnt
 
         private static string LoadSource(string path)
         {
-            using (var SR = new StreamReader(path, Encoding.UTF8))
+            using (var sr = new StreamReader(path, Encoding.UTF8))
             {
-                return SR.ReadToEnd();
+                return sr.ReadToEnd();
             }
         }
 
@@ -82,7 +82,7 @@ namespace OpnTKAssmnt
         {
             var ShaderSource = LoadSource(vertPath);
 
-            var VertextShader = GL.CreateShader(ShaderType.FragmentShader);
+            var VertextShader = GL.CreateShader(ShaderType.VertexShader);
 
             GL.ShaderSource(VertextShader, ShaderSource);
 
