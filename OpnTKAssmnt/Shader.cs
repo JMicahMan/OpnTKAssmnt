@@ -28,8 +28,10 @@ namespace OpnTKAssmnt
             GL.CompileShader(Shader);
 
             GL.GetShader(Shader, ShaderParameter.CompileStatus, out var Code);
+            string infoLog = GL.GetShaderInfoLog(Shader);
             if (Code != (int) All.True)
             {
+                Console.WriteLine(infoLog);
                 throw new Exception($"Error occurred while compiling Shader({Shader})");
             }
         }

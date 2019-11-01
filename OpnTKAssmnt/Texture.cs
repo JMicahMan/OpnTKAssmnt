@@ -7,6 +7,10 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using OpenTK.Graphics.OpenGL4;
 using PixleFormat = OpenTK.Graphics.OpenGL4.PixelFormat;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Advanced;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 
 namespace OpnTKAssmnt
 {
@@ -43,5 +47,12 @@ namespace OpnTKAssmnt
             GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
 
         }
+        
+        //Image<Rgba32> image = SixLabors.ImageSharp.Image.Load("Shades\fish.png");
+
+
+
+        
+
     }
 }
