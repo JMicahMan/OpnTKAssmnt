@@ -146,7 +146,7 @@ namespace OpnTKAssmnt
 
             LightingShader.SetVector3("viewPos", TheCamera.Position);
 
-           // LightingShader.SetVector3("material.ambient", new Vector3(1.0f, 0.5f, 0.31f));
+            // LightingShader.SetVector3("material.ambient", new Vector3(1.0f, 0.5f, 0.31f));
            // LightingShader.SetVector3("material.diffuse", new Vector3(1.0f, 0.5f, 0.31f));
             LightingShader.SetInt("material.diffuse", 0);
             LightingShader.SetInt("material.specular", 1);
@@ -164,9 +164,9 @@ namespace OpnTKAssmnt
             Vector3 DiffuseColor = LightColor * new Vector3(0.5f);
 
             LightingShader.SetVector3("light.position", LightPos);
-            LightingShader.SetVector3("light.ambient", AmbientColor);
-            LightingShader.SetVector3("light.diffuse", DiffuseColor);
-            LightingShader.SetVector3("light.specular", new Vector3(1.0f, 1.0f, 1.0f));
+            LightingShader.SetVector3("light.ambient", /*AmbientColor*/ new Vector3(0.2f));
+            LightingShader.SetVector3("light.diffuse", /*DiffuseColor*/ new Vector3(0.5f));
+            LightingShader.SetVector3("light.specular", /*new Vector3(1.0f, 1.0f, 1.0f)*/ new Vector3(1.0f));
 
             GL.DrawArrays(PrimitiveType.Triangles, 0, 36);
 
